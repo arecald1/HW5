@@ -1,3 +1,5 @@
+import com.google.gson.annotations.SerializedName;
+
 import java.util.Objects;
 
 /**
@@ -5,7 +7,10 @@ import java.util.Objects;
  */
 public class Course {
 
+    @SerializedName(value = "Offering Name")
     private final String offeringName;
+
+    @SerializedName(value = "Title")
     private final String title;
 
     /**

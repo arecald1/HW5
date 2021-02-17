@@ -15,6 +15,9 @@ public class ApiServer {
         courses.add(new Course("EN.601.231","AUTOMATA and COMPUTATION THEORY"));
 
         Gson gson = new Gson();
-        get("/api/courses", (req, res) -> courses, gson::toJson);
+        get("/api/courses", (req, res) -> {
+          res.type("application/json");
+            return courses;
+        }, gson::toJson);
     }
 }
